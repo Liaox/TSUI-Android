@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TSUI-Android.iml" filepath="$PROJECT_DIR$/TSUI-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tsui/tsui.iml" filepath="$PROJECT_DIR$/tsui/tsui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tsuidemo/tsuidemo.iml" filepath="$PROJECT_DIR$/tsuidemo/tsuidemo.iml" />
+    </modules>
+  </component>
+</project>
