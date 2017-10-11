@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--有加载动画的按钮 TSLoadingButton-->
+    <declare-styleable name="tsLoadButton">
+        <!--按钮文字-->
+        <attr name="tsText" format="reference|string"/>
+        <!--按钮文字颜色-->
+        <attr name="tsTextColor" format="color"/>
+        <!--按钮文字大小-->
+        <attr name="tsTextSize" format="dimension"/>
+        <!--加载的动画drawable-->
+        <attr name="tsLoadingView" format="integer"/>
+    </declare-styleable>
+
+    <!--组合按钮-->
+    <declare-styleable name="tsCombinationBtn">
+        <!--左图-->
+        <attr name="tsLeftImage" format="reference"/>
+        <!--右图-->
+        <attr name="tsRightImage" format="reference"/>
+        <!--左边文字-->
+        <attr name="tsLeftText" format="reference|string"/>
+        <!--右边文字-->
+        <attr name="tsRightText" format="reference|string"/>
+        <!--左边文字颜色-->
+        <attr name="tsLeftTextColor" format="reference|color"/>
+        <!--右边文字颜色-->
+        <attr name="tsRightTextColor" format="reference|color"/>
+        <!--是否显示分割线-->
+        <attr name="tsShowLine" format="reference|boolean"/>
+        <!--分割线左右间距-->
+        <attr name="tsDividerLeftMargin" format="reference|dimension"/>
+        <attr name="tsDividerRightMargin" format="reference|dimension"/>
+        <!--左边文字左边的间距-->
+        <attr name="tsLeftTextLeftPadding" format="reference|dimension"/>
+    </declare-styleable>
+
+</resources>

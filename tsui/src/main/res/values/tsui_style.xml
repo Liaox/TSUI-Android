@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--######################### 分割线 ##########################-->
+    <!-- 分隔线水平-->
+    <style name="style_divider_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tsui_diver_0.5</item>
+        <item name="android:background">@color/tsui_config_color_gray_8</item>
+    </style>
+    <!-- 分隔线水平 浅色-->
+    <style name="style_divider_horizontal_light">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tsui_diver_0.5</item>
+        <item name="android:background">@color/tsui_config_color_gray_9</item>
+    </style>
+    <!-- 分隔线垂直-->
+    <style name="style_divider_veitical">
+        <item name="android:layout_width">@dimen/tsui_diver_0.5</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/tsui_config_color_gray_8</item>
+    </style>
+    <!-- 分隔线垂直 浅色-->
+    <style name="style_divider_veitical_light">
+        <item name="android:layout_width">@dimen/tsui_diver_0.5</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/tsui_config_color_gray_9</item>
+    </style>
+</resources>
