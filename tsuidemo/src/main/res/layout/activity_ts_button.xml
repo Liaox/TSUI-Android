@@ -15,7 +15,7 @@
             android:text="@string/ts_hint_loading_button"
             android:layout_margin="@dimen/tsui_default_10"/>
 
-    <com.zhiyicx.tsui.button.TSLoadingButton
+    <com.zhiyicx.tsui.widget.button.TSLoadingButton
             android:id="@+id/tsLoadingBtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:text="@string/ts_hint_combination_button"
             android:layout_margin="@dimen/tsui_default_20"/>
 
-    <com.zhiyicx.tsui.button.TSCombinationButton
+    <com.zhiyicx.tsui.widget.button.TSCombinationButton
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="@dimen/tsui_default_10"

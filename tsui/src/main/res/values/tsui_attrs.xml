@@ -65,4 +65,11 @@
         <attr name="rightMaxLines" format="reference|integer"/>
     </declare-styleable>
 
+    <!--带有前缀的输入框-->
+    <declare-styleable name="TSPrefixEditText">
+        <!--前缀文字的起始位置-->
+        <attr name="tsPreStartPosition" format="integer"/>
+        <!--前缀文字的内容-->
+        <attr name="tsPreContent" format="string|reference"/>
+    </declare-styleable>
 </resources>

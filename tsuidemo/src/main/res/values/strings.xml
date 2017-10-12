@@ -2,4 +2,8 @@
     <string name="app_name">TSUI-Android</string>
     <string name="ts_hint_loading_button">带有加载动画的按钮，可以改变文字颜色大小，以及加载的动画的样式</string>
     <string name="ts_hint_combination_button">图文组合控件，可以设置左右的图片、文字颜色内容等。</string>
+    <string name="ts_hint_delete_edittext">带有清除按钮的输入框</string>
+    <string name="ts_hint_password_edittext">密码输入框</string>
+    <string name="ts_hint_info_edittext">信息输入输入框，可以设置是否必填等等</string>
+    <string name="ts_hint_pre_edittext">带有前缀的输入框</string>
 </resources>

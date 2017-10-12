@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:edit="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/tsui_default_10"
+        android:background="@color/tsui_config_color_white">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="@string/ts_hint_delete_edittext"/>
+
+    <com.zhiyicx.tsui.widget.edittext.TSDeleteEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/style_edit"
+            tools:text="xxxxx"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="@string/ts_hint_password_edittext"/>
+
+    <com.zhiyicx.tsui.widget.edittext.TSPasswordEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/style_edit"
+            tools:text="xxxxxxxxx"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="@string/ts_hint_info_edittext"/>
+
+    <com.zhiyicx.tsui.widget.edittext.TSInfoInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            style="@style/style_edit"
+            tools:text="xxxxxxxxxxx"
+            edit:showDiver="true"
+            edit:isRequired="visiable"
+            edit:leftHintText="xxx:"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="@string/ts_hint_pre_edittext"/>
+
+    <com.zhiyicx.tsui.widget.edittext.TSPrefixEditText
+            android:id="@+id/edit_pre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="xxxxxxxxxxx"/>
+
+</LinearLayout>

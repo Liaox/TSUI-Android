@@ -33,13 +33,22 @@ public class MainActivity extends AppCompatActivity {
         mRv.setLayoutManager(layoutManager);
         List<CateBean> list = new ArrayList<>();
         list.add(new CateBean());
+        list.add(new CateBean());
         MyAdapter adapter = new MyAdapter(this, list);
         mRv.setAdapter(adapter);
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                Intent intent = new Intent(MainActivity.this, TSButtonActivity.class);
-                startActivity(intent);
+                switch (position){
+                    case 0:
+                        Intent intent = new Intent(MainActivity.this, TSButtonActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent(MainActivity.this, TSEditTextActivity.class);
+                        startActivity(intent1);
+                        break;
+                }
             }
 
             @Override
