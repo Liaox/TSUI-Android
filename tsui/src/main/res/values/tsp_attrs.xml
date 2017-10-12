@@ -5,9 +5,9 @@
         <!--按钮文字-->
         <attr name="tsText" format="reference|string"/>
         <!--按钮文字颜色-->
-        <attr name="tsTextColor" format="color"/>
+        <attr name="tsTextColor" format="color|reference"/>
         <!--按钮文字大小-->
-        <attr name="tsTextSize" format="dimension"/>
+        <attr name="android:textSize"/>
         <!--加载的动画drawable-->
         <attr name="tsLoadingView" format="integer"/>
     </declare-styleable>

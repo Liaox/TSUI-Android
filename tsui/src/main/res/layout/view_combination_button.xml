@@ -34,7 +34,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/tsui_default_15"/>
+            android:layout_marginRight="@dimen/tsui_default_15"
+            android:src="@mipmap/login_ico_closeye"/>
 
     <TextView
             android:id="@+id/tv_right_text"
@@ -44,7 +45,7 @@
             android:textColor="@color/tsui_default_color"
             android:textSize="@dimen/tsui_btn_text_size"
             tools:text="34.8M"
-            android:layout_marginRight="@dimen/tsui_default_10"
+            android:layout_marginRight="@dimen/tsui_default_5"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/iv_right_img"
             android:layout_toStartOf="@+id/iv_right_img"/>

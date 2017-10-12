@@ -4,6 +4,7 @@
     <!--**********************************************
     *                  common                    *
     **********************************************-->
+    <dimen name="tsui_default_5">5dp</dimen>
     <dimen name="tsui_default_10">10dp</dimen>
     <dimen name="tsui_default_15">15dp</dimen>
     <dimen name="tsui_default_20">20dp</dimen>
