@@ -6,4 +6,5 @@
     <string name="ts_hint_password_edittext">密码输入框</string>
     <string name="ts_hint_info_edittext">信息输入输入框，可以设置是否必填等等</string>
     <string name="ts_hint_pre_edittext">带有前缀的输入框</string>
+    <string name="ts_hint_drawable_size_textview">可以设置 drawable 大小的 TextView</string>
 </resources>

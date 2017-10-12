@@ -2,6 +2,7 @@ package com.zhiyicx.tsui.widget.edittext;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatEditText;
+import android.text.Editable;
 import android.text.Selection;
 import android.util.AttributeSet;
 
@@ -54,10 +55,10 @@ public class TSPrefixEditText extends AppCompatEditText {
         }
     }
 
-//    @Override
-//    public Editable getText() {
-//        return super.getText().delete(0, mStartIndex);
-//    }
+    @Override
+    public Editable getText() {
+        return super.getText().replace(0, mStartIndex, "");
+    }
 
     /**
      * 设置起始位置
