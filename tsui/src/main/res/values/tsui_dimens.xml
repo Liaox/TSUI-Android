@@ -37,6 +37,13 @@
     <dimen name="tsui_btn_default_height">45dp</dimen>
 
     <!--**********************************************
+    *                  EditText                        *
+    **********************************************-->
+    <dimen name="tsui_text_size_14">14sp</dimen>
+    <dimen name="tsui_text_size_15">15dp</dimen>
+    <dimen name="tsui_text_size_16">16dp</dimen>
+
+    <!--**********************************************
     *                  Switch                        *
     **********************************************-->
     <dimen name="tsui_switch_size">20dp</dimen>

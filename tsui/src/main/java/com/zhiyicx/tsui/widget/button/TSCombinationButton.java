@@ -1,4 +1,4 @@
-package com.zhiyicx.tsui.button;
+package com.zhiyicx.tsui.widget.button;
 
 import android.content.Context;
 import android.content.res.TypedArray;

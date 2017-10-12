@@ -35,4 +35,34 @@
         <attr name="tsLeftTextLeftPadding" format="reference|dimension"/>
     </declare-styleable>
 
+    <!-- 可以设置 drawable 大小的 TSDrawableSizeTextView-->
+    <declare-styleable name="TSDrawableSizeTextView">
+        <attr name="compoundDrawableWidth" format="dimension"/>
+        <attr name="compoundDrawableHeight" format="dimension"/>
+    </declare-styleable>
+
+    <!--组合输入框 文字 输入框-->
+    <declare-styleable name="TSInputContainHint">
+        <!--是否显示分割线-->
+        <attr name="showDiver" format="reference|boolean"/>
+        <!--是否必填-->
+        <attr name="isRequired" format="enum">
+            <enum name="visiable" value="0"/>
+            <enum name="invisiable" value="4"/>
+            <enum name="gone" value="8"/>
+        </attr>
+        <!--左边文字-->
+        <attr name="leftHintText" format="reference|string"/>
+        <!--输入框提示-->
+        <attr name="rightHint" format="reference|string"/>
+        <!--输入的类型-->
+        <attr name="rightInputType" format="reference|string"/>
+        <!--输入长度-->
+        <attr name="rightMaxLength" format="reference|integer"/>
+        <!--内容高度-->
+        <attr name="totalMinHeight" format="reference|dimension"/>
+        <!--输入行数最高-->
+        <attr name="rightMaxLines" format="reference|integer"/>
+    </declare-styleable>
+
 </resources>
