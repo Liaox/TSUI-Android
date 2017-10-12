@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TSUI-Android</string>
     <string name="ts_hint_loading_button">带有加载动画的按钮，可以改变文字颜色大小，以及加载的动画的样式</string>
+    <string name="ts_hint_combination_button">图文组合控件，可以设置左右的图片、文字颜色内容等。</string>
 </resources>
