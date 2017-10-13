@@ -32,8 +32,18 @@ public class MainActivity extends AppCompatActivity {
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         mRv.setLayoutManager(layoutManager);
         List<CateBean> list = new ArrayList<>();
-        list.add(new CateBean());
-        list.add(new CateBean());
+        // Button
+        CateBean cateButton = new CateBean();
+        cateButton.setTitle("Button");
+        list.add(cateButton);
+        // EditText
+        CateBean cateEditText = new CateBean();
+        cateEditText.setTitle("EditText");
+        list.add(cateEditText);
+        // TextView
+        CateBean cateTextView = new CateBean();
+        cateTextView.setTitle("TextView");
+        list.add(cateTextView);
         MyAdapter adapter = new MyAdapter(this, list);
         mRv.setAdapter(adapter);
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
@@ -48,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent1 = new Intent(MainActivity.this, TSEditTextActivity.class);
                         startActivity(intent1);
                         break;
+                    case 2:
+                        Intent intent2 = new Intent(MainActivity.this, TSTextViewActivity.class);
+                        startActivity(intent2);
+                        break;
+                    default:
                 }
             }
 
@@ -66,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void convert(ViewHolder holder, CateBean cateBean, int position) {
-
+            holder.setText(R.id.tv_title, cateBean.getTitle());
         }
     }
 

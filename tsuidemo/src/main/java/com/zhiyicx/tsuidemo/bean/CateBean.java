@@ -42,4 +42,12 @@ public class CateBean implements Parcelable{
             return new CateBean[size];
         }
     };
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

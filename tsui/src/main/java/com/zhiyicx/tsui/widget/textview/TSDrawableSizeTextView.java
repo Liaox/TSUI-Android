@@ -41,8 +41,8 @@ public class TSDrawableSizeTextView extends AppCompatTextView {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TSDrawableSizeTextView, defStyleAttr, defStyleRes);
 
         try {
-            mDrawableWidth = array.getDimensionPixelSize(R.styleable.TSDrawableSizeTextView_compoundDrawableWidth, -1);
-            mDrawableHeight = array.getDimensionPixelSize(R.styleable.TSDrawableSizeTextView_compoundDrawableHeight, -1);
+            mDrawableWidth = array.getDimensionPixelSize(R.styleable.TSDrawableSizeTextView_tsCompoundDrawableWidth, -1);
+            mDrawableHeight = array.getDimensionPixelSize(R.styleable.TSDrawableSizeTextView_tsCompoundDrawableHeight, -1);
         } finally {
             array.recycle();
         }

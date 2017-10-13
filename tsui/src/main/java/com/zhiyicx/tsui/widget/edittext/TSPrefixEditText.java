@@ -55,10 +55,10 @@ public class TSPrefixEditText extends AppCompatEditText {
         }
     }
 
-    @Override
-    public Editable getText() {
-        return super.getText().replace(0, mStartIndex, "");
-    }
+//    @Override
+//    public Editable getText() {
+//        return super.getText().replace(0, mStartIndex, "");
+//    }
 
     /**
      * 设置起始位置

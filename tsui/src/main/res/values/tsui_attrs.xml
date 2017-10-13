@@ -37,8 +37,8 @@
 
     <!-- 可以设置 drawable 大小的 TSDrawableSizeTextView-->
     <declare-styleable name="TSDrawableSizeTextView">
-        <attr name="compoundDrawableWidth" format="dimension"/>
-        <attr name="compoundDrawableHeight" format="dimension"/>
+        <attr name="tsCompoundDrawableWidth" format="dimension"/>
+        <attr name="tsCompoundDrawableHeight" format="dimension"/>
     </declare-styleable>
 
     <!--组合输入框 文字 输入框-->
