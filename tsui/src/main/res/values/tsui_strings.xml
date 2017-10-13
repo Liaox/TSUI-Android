@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">tsui</string>
+
+    <!--**********************************************
+    *                  common                    *
+    **********************************************-->
+    <string name="tsui_common_cancel">取消</string>
+    <string name="tsui_common_sure">确认</string>
 </resources>
