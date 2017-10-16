@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
         CateBean catePopupWindow = new CateBean();
         catePopupWindow.setTitle("PopupWindow");
         list.add(catePopupWindow);
+        // ImageView
+        CateBean cateImageView = new CateBean();
+        cateImageView.setTitle("ImageView");
+        list.add(cateImageView);
         MyAdapter adapter = new MyAdapter(this, list);
         mRv.setAdapter(adapter);
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
@@ -69,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         Intent intent3 = new Intent(MainActivity.this, TSPopupWindowActivity.class);
                         startActivity(intent3);
+                        break;
+                    case 4:
+                        Intent intent4 = new Intent(MainActivity.this, TSImageViewActivity.class);
+                        startActivity(intent4);
                         break;
                     default:
                 }
