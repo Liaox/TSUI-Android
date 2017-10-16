@@ -90,5 +90,6 @@
     -->
     <color name="tsui_general_for_hint">#cccccc</color>
     <color name="tsui_general_for_hint_alpha">#80cccccc</color>
+    <color name="input_view_bg_color">#fafafa</color>
 
 </resources>

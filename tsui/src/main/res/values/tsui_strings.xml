@@ -6,4 +6,5 @@
     **********************************************-->
     <string name="tsui_common_cancel">取消</string>
     <string name="tsui_common_sure">确认</string>
+    <string name="tsui_common_send">发送</string>
 </resources>

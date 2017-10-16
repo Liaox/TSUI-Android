@@ -5,6 +5,7 @@
     *                  common                    *
     **********************************************-->
     <dimen name="tsui_default_5">5dp</dimen>
+    <dimen name="tsui_default_8">8dp</dimen>
     <dimen name="tsui_default_10">10dp</dimen>
     <dimen name="tsui_default_15">15dp</dimen>
     <dimen name="tsui_default_20">20dp</dimen>
@@ -35,10 +36,13 @@
     <dimen name="tsui_btn_text_size">16sp</dimen>
     <dimen name="tsui_btn_border_width">1dp</dimen>
     <dimen name="tsui_btn_default_height">45dp</dimen>
+    <dimen name="button_send_height">25dp</dimen>
+    <dimen name="button_send_with">45dp</dimen>
 
     <!--**********************************************
     *                  EditText                        *
     **********************************************-->
+    <dimen name="tsui_text_size_11">11sp</dimen>
     <dimen name="tsui_text_size_14">14sp</dimen>
     <dimen name="tsui_text_size_15">15sp</dimen>
     <dimen name="tsui_text_size_16">16sp</dimen>
