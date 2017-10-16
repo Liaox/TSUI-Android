@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="@dimen/hintview_corner"/>
-    <solid android:color="@color/white"/>
+    <corners android:radius="@dimen/tsui_radius_2"/>
+    <solid android:color="@color/tsui_config_color_white"/>
 </shape>

@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         CateBean cateTextView = new CateBean();
         cateTextView.setTitle("TextView");
         list.add(cateTextView);
+        // PopupWindow
+        CateBean catePopupWindow = new CateBean();
+        catePopupWindow.setTitle("PopupWindow");
+        list.add(catePopupWindow);
         MyAdapter adapter = new MyAdapter(this, list);
         mRv.setAdapter(adapter);
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
@@ -61,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         Intent intent2 = new Intent(MainActivity.this, TSTextViewActivity.class);
                         startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent(MainActivity.this, TSPopupWindowActivity.class);
+                        startActivity(intent3);
                         break;
                     default:
                 }

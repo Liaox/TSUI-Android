@@ -20,7 +20,7 @@ import com.zhiyicx.tsui.utils.DeviceUtils;
  * @Date 2016/12/15
  * @Contact 335891510@qq.com
  */
-public class CustomPopupWindow extends PopupWindow {
+public class TSBasePopupWindow extends PopupWindow {
     public static final float POPUPWINDOW_ALPHA = .8f;
 
     protected View mContentView;
@@ -38,7 +38,7 @@ public class CustomPopupWindow extends PopupWindow {
     protected int width;
     protected int height;
 
-    protected CustomPopupWindow(Builder builder) {
+    protected TSBasePopupWindow(Builder builder) {
         this.mAlpha = builder.mAlpha;
         this.width = builder.width;
         this.height = builder.height;
@@ -216,13 +216,13 @@ public class CustomPopupWindow extends PopupWindow {
             return this;
         }
 
-        public CustomPopupWindow build() {
+        public TSBasePopupWindow build() {
             if (contentViewId <= 0)
                 throw new IllegalStateException("contentView is required");
 //            if (listener == null)
 //                throw new IllegalStateException("CustomPopupWindowListener is required");
 
-            return new CustomPopupWindow(this);
+            return new TSBasePopupWindow(this);
         }
     }
 

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/tsui_default_10">
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="两个继承自CustomPopupWindow的提示框，有其他的需求可以自定义弹框继承CustomPopupWindow"/>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="带有标题、正文、默认取消和确认的提示框，可以设置文字的内容、颜色和大小。"/>
+
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_center_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中间提示语弹框"
+            android:padding="@dimen/tsui_default_10"
+            android:textColor="@color/tsui_config_color_white"
+            android:layout_margin="@dimen/tsui_default_10"
+            android:background="@drawable/shape_button_corner_normal_solid_small"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="仅有中间提示内容和一个确认按钮的提示框。"/>
+
+
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_alert_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅提示语弹框"
+            android:padding="@dimen/tsui_default_10"
+            android:textColor="@color/tsui_config_color_white"
+            android:layout_margin="@dimen/tsui_default_10"
+            android:background="@drawable/shape_button_corner_normal_solid_small"/>
+
+</LinearLayout>

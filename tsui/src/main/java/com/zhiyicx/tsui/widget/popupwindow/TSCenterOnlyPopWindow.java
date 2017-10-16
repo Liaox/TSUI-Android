@@ -13,19 +13,18 @@ import com.zhiyicx.tsui.R;
 
 /**
  * @author Catherine
- * @describe 中间的提示框 按钮默认确认和取消
- * @date 2017/8/21
+ * @describe 仅有中间提示语和一个确认按钮的提示框, 可以隐藏掉确认按钮
+ * @date 2017/10/16
  * @contact email:648129313@qq.com
  */
 
-public class CenterAlertPopWindow extends CustomPopupWindow {
+public class TSCenterOnlyPopWindow extends TSBasePopupWindow {
 
     private CenterPopWindowItemClickListener mCenterPopWindowItemClickListener;
 
     private String titleStr;
     private String centerContent;
-    private String itemRight;
-    private String itemLeft;
+    private String buttonContent;
 
     private int titleTextSize;
     private int titleTextColor;
@@ -33,17 +32,15 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
     private int contentTextSize;
     private int contentTextColor;
 
-    private int leftTextSize;
-    private int leftTextColor;
-
-    private int rightTextSize;
-    private int rightTextColor;
+    private int buttonTextColor;
+    private int buttonTextSize;
+    private boolean isShowButton; // 是否显示底部的按钮，默认是显示的
 
     public static CBuilder builder() {
         return new CBuilder();
     }
 
-    protected CenterAlertPopWindow(CBuilder builder) {
+    protected TSCenterOnlyPopWindow(CBuilder builder) {
         super(builder);
         // 标题
         this.titleStr = builder.titleStr;
@@ -53,28 +50,29 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
         this.centerContent = builder.centerContent;
         this.contentTextSize = builder.contentTextSize;
         this.contentTextColor = builder.contentTextColor;
-        // 右边
-        this.itemRight = builder.itemRight;
-        this.rightTextColor = builder.rightTextColor;
-        this.rightTextSize = builder.rightTextSize;
-        // 左边
-        this.itemLeft = builder.itemLeft;
-        this.leftTextColor = builder.leftTextColor;
-        this.leftTextSize = builder.leftTextSize;
-        this.mCenterPopWindowItemClickListener = builder.mCenterPopWindowItemClickListener;
+        // 底部按钮
+        this.buttonContent = builder.buttonContent;
+        this.buttonTextColor = builder.buttonTextColor;
+        this.buttonTextSize = builder.buttonTextSize;
+        this.isShowButton = builder.isShowButton;
 
+        this.mCenterPopWindowItemClickListener = builder.mCenterPopWindowItemClickListener;
         initView();
     }
 
     private void initView() {
         initTextView(titleStr, titleTextColor, R.id.ppw_center_title, titleTextSize);
         initTextView(centerContent, contentTextColor, R.id.ppw_center_description, contentTextSize);
-        initBottomLeftView(itemLeft, leftTextColor, R.id.ppw_center_item_left, leftTextSize, mCenterPopWindowItemClickListener);
-        initBottomRightView(itemRight, rightTextColor, R.id.ppw_center_item, rightTextSize, mCenterPopWindowItemClickListener);
+        initBottomView(isShowButton, buttonContent, buttonTextColor, R.id.ppw_center_bottom, buttonTextSize, mCenterPopWindowItemClickListener);
     }
 
-    private void initBottomRightView(String text, int colorId, int resId, int size, final CenterPopWindowItemClickListener listener) {
+    private void initBottomView(boolean isShowButton, String text, int colorId, int resId, int size, final CenterPopWindowItemClickListener listener) {
         TextView textView = mContentView.findViewById(resId);
+        if (!isShowButton){
+            textView.setVisibility(View.GONE);
+            mContentView.findViewById(R.id.view_diver).setVisibility(View.GONE);
+            return;
+        }
         if (!TextUtils.isEmpty(text)) {
             textView.setText(text);
         }
@@ -88,28 +86,7 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
             @Override
             public void onClick(View view) {
                 if (listener != null) {
-                    listener.onRightClicked();
-                }
-            }
-        });
-    }
-
-    private void initBottomLeftView(String text, int colorId, int resId, int size, final CenterPopWindowItemClickListener listener) {
-        TextView textView = mContentView.findViewById(resId);
-        if (!TextUtils.isEmpty(text)) {
-            textView.setText(text);
-        }
-        if (colorId != 0) {
-            textView.setTextColor(ContextCompat.getColor(mActivity, colorId));
-        }
-        if (size != 0){
-            textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, size);
-        }
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (listener != null) {
-                    listener.onLeftClicked();
+                    listener.onButtonClick();
                 }
             }
         });
@@ -134,8 +111,6 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
         private CenterPopWindowItemClickListener mCenterPopWindowItemClickListener;
         private String titleStr;
         private String centerContent;
-        private String itemRight;
-        private String itemLeft;
 
         // 样式相关 emm 感觉不常用啊
         private int titleTextSize;
@@ -144,11 +119,10 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
         private int contentTextSize;
         private int contentTextColor;
 
-        private int leftTextSize;
-        private int leftTextColor;
-
-        private int rightTextSize;
-        private int rightTextColor;
+        private String buttonContent;
+        private int buttonTextSize;
+        private int buttonTextColor;
+        private boolean isShowButton = true;
 
         public CBuilder buildCenterPopWindowItem1ClickListener(CenterPopWindowItemClickListener mCenterPopWindowItem1ClickListener) {
             this.mCenterPopWindowItemClickListener = mCenterPopWindowItem1ClickListener;
@@ -173,6 +147,7 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
             return this;
         }
 
+        // 标题提示文字的内容以及样式，不传或者传空为默认的
         public CBuilder titleContent(String content) {
             this.titleStr = content;
             return this;
@@ -184,38 +159,9 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
             return this;
         }
 
-        public CBuilder desStr(String desStr) {
-            this.centerContent = desStr;
-            return this;
-        }
-
-        // 右边文字的内容以及样式，不传或者传空为默认的
-        public CBuilder rightContent(String itemRightStr) {
-            this.itemRight = itemRightStr;
-            return this;
-        }
-
-        public CBuilder rightTextStyle(int rightTextColor, int rightTextSize) {
-            this.rightTextColor = rightTextColor;
-            this.rightTextSize = rightTextSize;
-            return this;
-        }
-
-        // 左边文字的内容以及样式，不传或者传空为默认的
-        public CBuilder leftContent(String itemLeft){
-            this.itemLeft = itemLeft;
-            return this;
-        }
-
-        public CBuilder leftTextStyle(int leftTextColor, int leftTextSize){
-            this.leftTextColor = leftTextColor;
-            this.leftTextSize = leftTextSize;
-            return this;
-        }
-
         // 中间提示文字的内容以及样式，不传或者传空为默认的
-        public CBuilder centerContent(String itemLeft){
-            this.itemLeft = itemLeft;
+        public CBuilder centerContent(String centerContent){
+            this.centerContent = centerContent;
             return this;
         }
 
@@ -225,6 +171,22 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
             return this;
         }
 
+        // 底部按钮提示文字的内容以及样式，不传或者传空为默认的
+        public CBuilder buttonContent(String buttonContent){
+            this.buttonContent = buttonContent;
+            return this;
+        }
+
+        public CBuilder buttonTextStyle(int buttonTextColor, int buttonTextSize){
+            this.buttonTextColor = buttonTextColor;
+            this.buttonTextSize = buttonTextSize;
+            return this;
+        }
+
+        public CBuilder isShowBottomButton(boolean isShowButton){
+            this.isShowButton = isShowButton;
+            return this;
+        }
 
         @Override
         public CBuilder with(Activity activity) {
@@ -262,16 +224,15 @@ public class CenterAlertPopWindow extends CustomPopupWindow {
         }
 
         @Override
-        public CenterAlertPopWindow build() {
-            contentViewId = R.layout.ppw_for_center_alert;
+        public TSCenterOnlyPopWindow build() {
+            contentViewId = R.layout.ppw_for_center_only;
             isWrap = true;
-            return new CenterAlertPopWindow(this);
+            return new TSCenterOnlyPopWindow(this);
         }
     }
 
     public interface CenterPopWindowItemClickListener {
-        void onRightClicked();
-        void onLeftClicked();
+        void onButtonClick();
     }
 
 }

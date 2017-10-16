@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tool="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tool="http://schemas.android.com/tools"
+            android:id="@+id/ll_container"
+            android:layout_width="@dimen/tsui_ppw_default_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_popwindow"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/ppw_center_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tsui_config_color_black"
+                android:textSize="@dimen/tsui_text_size_16"
+                tool:text="title"
+                android:layout_marginTop="@dimen/tsui_default_15"/>
+
+        <View
+                android:id="@+id/v_line"
+                style="@style/style_divider_horizontal_light"
+                android:layout_marginTop="@dimen/tsui_default_15"
+                android:layout_marginRight="@dimen/tsui_default_20"
+                android:layout_marginLeft="@dimen/tsui_default_20"/>
+
+        <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:layout_marginTop="@dimen/tsui_default_20"
+                android:layout_marginBottom="@dimen/tsui_default_20"
+                android:layout_marginRight="@dimen/tsui_default_20"
+                android:layout_marginLeft="@dimen/tsui_default_20">
+
+            <TextView
+                    android:id="@+id/ppw_center_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tsui_config_color_black"
+                    android:textSize="@dimen/tsui_text_size_14"
+                    tool:text="我不要钱,控股发电技术管理经费控股发电技术管理经费的失落感更加疯狂楼市的价格轮番看电视剧管理费的角色加工费的失落感积分控股发电技术管理经费的失落感更加疯狂楼市的价格轮番看电视剧管理费的角色加工费的失落感积分的失落感更加疯狂楼市的价格轮番看电视剧管理费的角色加工费的失落感积分"/>
+        </ScrollView>
+
+        <View
+                android:id="@+id/view_diver"
+                style="@style/style_divider_horizontal_light"
+                android:layout_marginTop="@dimen/tsui_default_10"/>
+
+        <TextView
+                android:id="@+id/ppw_center_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tsui_ppw_default_button_height"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="@color/tsui_default_color"
+                android:textSize="@dimen/tsui_text_size_14"
+                android:visibility="visible"
+                android:text="@string/tsui_common_sure"/>
+
+
+    </LinearLayout>
+</FrameLayout>
