@@ -60,4 +60,19 @@
             android:layout_height="wrap_content"
             tools:text="xxxxxxxxxxx"/>
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/tsui_default_10"
+            android:text="@string/ts_hint_limit_edittext"/>
+
+    <com.zhiyicx.tsui.widget.edittext.TSInputLimitView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edit:tsLimitSize="20"
+            edit:tsShowLimitSize="15"
+            edit:tsShowLines="5"
+            edit:tsContent_gravity="right"
+            edit:tsContent_size="17sp"/>
+
 </LinearLayout>
