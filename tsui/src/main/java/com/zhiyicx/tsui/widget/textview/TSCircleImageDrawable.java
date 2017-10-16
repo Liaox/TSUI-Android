@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
  * @Email Jliuer@aliyun.com
  * @Description
  */
-public class CircleImageDrawable extends Drawable {
+public class TSCircleImageDrawable extends Drawable {
 
     private Paint mPaint;
     private int mWidth;
@@ -30,7 +30,7 @@ public class CircleImageDrawable extends Drawable {
         this.tag = tag;
     }
 
-    public CircleImageDrawable(Bitmap bitmap) {
+    public TSCircleImageDrawable(Bitmap bitmap) {
         mBitmap = bitmap;
         BitmapShader bitmapShader = new BitmapShader(bitmap, Shader.TileMode.CLAMP,
                 Shader.TileMode.CLAMP);

@@ -19,7 +19,7 @@ import com.zhiyicx.tsui.utils.ConvertUtils;
  * @Email Jliuer@aliyun.com
  * @Description 控制图片位置
  */
-public class CenterImageSpan extends ImageSpan {
+public class TSCenterImageSpan extends ImageSpan {
 
     String text = "匿";
     boolean isText;
@@ -29,26 +29,26 @@ public class CenterImageSpan extends ImageSpan {
     private Drawable verified;
     private Context mContext;
 
-    public CenterImageSpan(Context context, Bitmap b) {
+    public TSCenterImageSpan(Context context, Bitmap b) {
         super(context, b);
         this.mContext = context;
     }
 
-    public CenterImageSpan(Context context, Bitmap b, int verticalAlignment) {
+    public TSCenterImageSpan(Context context, Bitmap b, int verticalAlignment) {
         super(context, b, verticalAlignment);
         this.mContext = context;
     }
 
-    public CenterImageSpan(Drawable d) {
+    public TSCenterImageSpan(Drawable d) {
         super(d);
     }
 
-    public CenterImageSpan(Drawable d, boolean isText) {
+    public TSCenterImageSpan(Drawable d, boolean isText) {
         super(d);
         this.isText = isText;
     }
 
-    public CenterImageSpan(Drawable d, Drawable v, boolean isText) {
+    public TSCenterImageSpan(Drawable d, Drawable v, boolean isText) {
         super(d);
         this.verified = v;
         this.isText = isText;
