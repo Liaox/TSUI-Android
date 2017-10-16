@@ -71,6 +71,9 @@ public class TSBasePopupWindow extends PopupWindow {
         if (height > 0) {
             setHeight(height);
         }
+        if (mAlpha == 0){
+            mAlpha = POPUPWINDOW_ALPHA;
+        }
         setFocusable(isFocus);
         setOutsideTouchable(isOutsideTouch);
         setBackgroundDrawable(mBackgroundDrawable);
