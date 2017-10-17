@@ -33,10 +33,10 @@ public class TSCombinationButton extends FrameLayout {
     public TSCombinationButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.view_combination_button, this);
-        mCombinedButtonImgLeft = (ImageView) findViewById(R.id.iv_left_img);
-        mCombinedButtonImgRight = (ImageView) findViewById(R.id.iv_right_img);
-        mCombinedButtonLeftText = (TextView) findViewById(R.id.tv_left_text);
-        mCombinedButtonRightText = (TextView) findViewById(R.id.tv_right_text);
+        mCombinedButtonImgLeft = findViewById(R.id.iv_left_img);
+        mCombinedButtonImgRight = findViewById(R.id.iv_right_img);
+        mCombinedButtonLeftText = findViewById(R.id.tv_left_text);
+        mCombinedButtonRightText = findViewById(R.id.tv_right_text);
         mVLine = findViewById(R.id.v_line);
         TypedArray array = context.obtainStyledAttributes(attrs,
                 R.styleable.tsCombinationBtn);
@@ -82,6 +82,8 @@ public class TSCombinationButton extends FrameLayout {
 
     /**
      * 设置左边文字内容
+     *
+     * @param leftText content
      */
     public void setLeftText(String leftText) {
         mCombinedButtonLeftText.setText(leftText);
@@ -89,6 +91,8 @@ public class TSCombinationButton extends FrameLayout {
 
     /**
      * 设置右边文字内容
+     *
+     * @param rightText content
      */
     public void setRightText(String rightText) {
         mCombinedButtonRightText.setText(rightText);
@@ -96,27 +100,54 @@ public class TSCombinationButton extends FrameLayout {
 
     /**
      * 设置右边文字内容颜色
+     *
+     * @param color 颜色值
      */
     public void setRightTextColor(int color) {
         mCombinedButtonRightText.setTextColor(color);
     }
 
+    /**
+     * 获取右侧TextView
+     *
+     * @return TextView
+     */
     public TextView getCombinedButtonRightTextView() {
         return mCombinedButtonRightText;
     }
 
+    /**
+     * 获取右侧TextView文字内容
+     *
+     * @return String
+     */
     public String getRightText() {
         return mCombinedButtonRightText.getText().toString();
     }
 
+    /**
+     * 设置右边图片的点击事件
+     *
+     * @param listener OnClickListener
+     */
     public void setRightImageClickListener(OnClickListener listener) {
         mCombinedButtonImgRight.setOnClickListener(listener);
     }
 
+    /**
+     * 获取右边图片控件
+     *
+     * @return ImageView
+     */
     public ImageView getCombinedButtonImgRight() {
         return mCombinedButtonImgRight;
     }
 
+    /**
+     * 设置右边图片的资源
+     *
+     * @param res id
+     */
     public void setRightImage(int res) {
         mCombinedButtonImgRight.setImageResource(res);
     }

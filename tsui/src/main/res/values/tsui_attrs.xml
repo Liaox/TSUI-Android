@@ -9,7 +9,7 @@
         <!--按钮文字大小-->
         <attr name="android:textSize"/>
         <!--加载的动画drawable-->
-        <attr name="tsLoadingView" format="integer"/>
+        <attr name="tsLoadingView" format="reference"/>
     </declare-styleable>
 
     <!--组合按钮-->

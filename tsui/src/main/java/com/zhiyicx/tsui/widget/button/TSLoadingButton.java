@@ -3,6 +3,7 @@ package com.zhiyicx.tsui.widget.button;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -53,15 +54,16 @@ public class TSLoadingButton extends FrameLayout {
         // 按钮文字颜色
         int textColor = array.getColor(R.styleable.tsLoadButton_tsTextColor, 0x801B88EE);
         // 按钮加载动画
-        int animationRes = array.getResourceId(R.styleable.tsLoadButton_tsLoadingView, R.drawable.frame_loading_white);
+        Drawable animationRes = array.getDrawable(R.styleable.tsLoadButton_tsLoadingView);
         array.recycle();
         if (!TextUtils.isEmpty(text)) {
             mTvText.setText(text);
         }
         mTvText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
         mTvText.setTextColor(textColor);
-        mIvLoad.setImageResource(animationRes);
-
+        if (animationRes != null){
+            mIvLoad.setImageDrawable(animationRes);
+        }
         mAnimationDrawable = (AnimationDrawable) mIvLoad.getDrawable();
         mContainer.setOnClickListener(new OnClickListener() {
             @Override
