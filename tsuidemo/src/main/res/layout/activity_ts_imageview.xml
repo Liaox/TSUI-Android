@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:image="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.zhiyicx.tsui.widget.imageview.TSFilterImageView
+    <TextView
+            android:id="@+id/user_avatar_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
-            image:pressColor="@color/tsui_config_color_gray_7"/>
+            android:layout_margin="@dimen/tsui_default_10"
+            android:text="一个通用的用户头像，可以设置认证图标"/>
 
-</LinearLayout>
+    <com.zhiyicx.tsui.widget.view.TSUserAvatarView
+            android:id="@+id/user_avatar"
+            android:layout_width="@dimen/head_pic_default"
+            android:layout_height="@dimen/head_pic_default"
+            android:layout_marginLeft="@dimen/tsui_default_10"
+            image:ts_avatare_size="@dimen/head_pic_default"
+            android:layout_below="@+id/user_avatar_hint"
+            android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+            android:id="@+id/empty_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_avatar"
+            android:layout_margin="@dimen/tsui_default_10"
+            android:text="缺省页，可以设置不同改的状态以及对应的文字图片"/>
+
+    <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/empty_hint"
+            android:orientation="horizontal">
+        <Button
+                android:id="@+id/btn_no_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nodata"/>
+        <Button
+                android:id="@+id/btn_no_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nonet"/>
+        <Button
+                android:id="@+id/btn_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="loading"/>
+    </LinearLayout>
+
+    <com.zhiyicx.tsui.widget.view.TSEmptyView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_btn"/>
+
+</RelativeLayout>

@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
         CateBean catePopupWindow = new CateBean();
         catePopupWindow.setTitle("PopupWindow");
         list.add(catePopupWindow);
-        // ImageView
-        CateBean cateImageView = new CateBean();
-        cateImageView.setTitle("ImageView");
-        list.add(cateImageView);
+        // View
+        CateBean cateView = new CateBean();
+        cateView.setTitle("View");
+        list.add(cateView);
         // Utils
         CateBean cateUtils = new CateBean();
         cateUtils.setTitle("Utils");
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent3);
                         break;
                     case 4:
-                        Intent intent4 = new Intent(MainActivity.this, TSImageViewActivity.class);
+                        Intent intent4 = new Intent(MainActivity.this, TSViewActivity.class);
                         startActivity(intent4);
                         break;
                     case 5:

@@ -29,7 +29,7 @@
                 android:name=".TSPopupWindowActivity"
                 android:screenOrientation="portrait"/>
         <activity
-                android:name=".TSImageViewActivity"
+                android:name=".TSViewActivity"
                 android:screenOrientation="portrait"/>
         <activity
                 android:name=".TSUtilsActivity"
