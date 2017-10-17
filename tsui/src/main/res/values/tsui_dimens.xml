@@ -9,6 +9,7 @@
     <dimen name="tsui_default_10">10dp</dimen>
     <dimen name="tsui_default_15">15dp</dimen>
     <dimen name="tsui_default_20">20dp</dimen>
+    <dimen name="tsui_default_30">30dp</dimen>
 
     <!--**********************************************
     *                  radius                    *
@@ -85,6 +86,12 @@
     <dimen name="tsui_list_item_detail_lineSpacingExtra">5dp</dimen>
     <dimen name="tsui_group_list_section_header_footer_padding_vertical">8dp</dimen>
     <dimen name="tsui_group_list_section_header_footer_textSize">13sp</dimen>
+
+
+    <!--**********************************************
+        *                   View                    *
+        **********************************************-->
+    <dimen name="head_pic_default">38dp</dimen>
 
 
     <!-- 全局统一的界面左右间距，例如列表分隔线inset -->

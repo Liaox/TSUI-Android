@@ -103,4 +103,28 @@
         <!--输入框hint-->
         <attr name="ts_md_hint" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="TSEmptyView">
+        <!--没有数据时的提示语-->
+        <attr name="tsNoDataTip" format="string|reference"/>
+        <!--没有数据时的图片-->
+        <attr name="tsNoDataImage" format="reference"/>
+        <!--没有网络时的提示语-->
+        <attr name="tsNoNetTip" format="string|reference"/>
+        <!--没有网络时的图片-->
+        <attr name="tsNoNetImage" format="reference"/>
+        <!--加载时的提示语-->
+        <attr name="tsLadingTip" format="string|reference"/>
+        <!--是否显示文字提示-->
+        <attr name="tsIsShowTip" format="boolean"/>
+        <!--是否显示图片提示-->
+        <attr name="tsIsShowImage" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TSUserAvatarView">
+        <!--头像大小-->
+        <attr name="ts_avatare_size" format="dimension"/>
+        <attr name="ts_ratio" format="float"/>
+
+    </declare-styleable>
 </resources>
