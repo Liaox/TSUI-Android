@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.zhiyicx.tsui.R;
-import com.zhiyicx.tsui.utils.ConvertUtils;
+import com.zhiyicx.tsui.utils.TSConvertUtils;
 
 
 /**
@@ -50,7 +50,7 @@ public class TSLoadingButton extends FrameLayout {
         // 按钮文字
         String text = array.getString(R.styleable.tsLoadButton_tsText);
         // 按钮文字大小
-        int textSize = array.getDimensionPixelSize(R.styleable.tsLoadButton_android_textSize, ConvertUtils.dp2px(context, 5));
+        int textSize = array.getDimensionPixelSize(R.styleable.tsLoadButton_android_textSize, TSConvertUtils.dp2px(context, 5));
         // 按钮文字颜色
         int textColor = array.getColor(R.styleable.tsLoadButton_tsTextColor, 0x801B88EE);
         // 按钮加载动画

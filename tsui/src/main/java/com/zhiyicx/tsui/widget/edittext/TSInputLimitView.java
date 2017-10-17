@@ -18,7 +18,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.zhiyicx.tsui.R;
-import com.zhiyicx.tsui.utils.ColorPhrase;
+import com.zhiyicx.tsui.utils.TSColorPhrase;
 
 /**
  * @Describe 限制输入控件 view
@@ -133,7 +133,7 @@ public class TSInputLimitView extends FrameLayout {
                 }
                 if (s.length() >= mShowLimitSize) {
                     mLimitTipStr = "<" + s.length() + ">" + "/" + mLimitMaxSize;
-                    CharSequence chars = ColorPhrase.from(mLimitTipStr).withSeparator("<>")
+                    CharSequence chars = TSColorPhrase.from(mLimitTipStr).withSeparator("<>")
                             .innerColor(ContextCompat.getColor(context, R.color.tsui_config_color_red))
                             .outerColor(ContextCompat.getColor(context, R.color.tsui_general_for_hint))
                             .format();

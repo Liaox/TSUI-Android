@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.zhiyicx.tsui.R;
-import com.zhiyicx.tsui.utils.ConvertUtils;
+import com.zhiyicx.tsui.utils.TSConvertUtils;
 
 
 /**
@@ -49,7 +49,7 @@ public class TSCombinationButton extends FrameLayout {
         boolean showLine = array.getBoolean(R.styleable.tsCombinationBtn_tsShowLine, true);
         int dividerLeftMargin = array.getDimensionPixelSize(R.styleable.tsCombinationBtn_tsDividerLeftMargin, 0);
         int dividerRightMargin = array.getDimensionPixelSize(R.styleable.tsCombinationBtn_tsDividerRightMargin, 0);
-        int leftTextLeftPadding = array.getDimensionPixelOffset(R.styleable.tsCombinationBtn_tsLeftTextLeftPadding, ConvertUtils.dp2px(context, 10));
+        int leftTextLeftPadding = array.getDimensionPixelOffset(R.styleable.tsCombinationBtn_tsLeftTextLeftPadding, TSConvertUtils.dp2px(context, 10));
         array.recycle();
         if (!TextUtils.isEmpty(leftText)) {
             mCombinedButtonLeftText.setText(leftText);

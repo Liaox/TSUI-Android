@@ -17,7 +17,7 @@ import java.util.Stack;
  *
  * A fluent API for formatting Strings. Canonical usage:
  * <pre>
- *  CharSequence chars = ColorPhrase.from("I'm<Chinese>,I love <China>").
+ *  CharSequence chars = TSColorPhrase.from("I'm<Chinese>,I love <China>").
  *                                                              withSeparator("<>").
  *                                                              innerColor(0xFFE6454A).
  *                                                              outerColor(0xFF666666).
@@ -33,7 +33,7 @@ import java.util.Stack;
  * The {@link #format()} method iterates over the tokens, replacing and coloring the text as it iterates. The
  * doubly-linked list allows each token to ask its predecessor for the expanded length.
  */
-public class ColorPhrase {
+public class TSColorPhrase {
 	/** The unmodified original pattern. */
 	private final CharSequence pattern;
 	/** Cached result after replacing all keys with corresponding values. */
@@ -60,7 +60,7 @@ public class ColorPhrase {
 	 *             if pattern contains any syntax errors.
 	 */
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	public static ColorPhrase from(Fragment f, int patternResourceId) {
+	public static TSColorPhrase from(Fragment f, int patternResourceId) {
 		return from(f.getResources(), patternResourceId);
 	}
 
@@ -70,7 +70,7 @@ public class ColorPhrase {
 	 * @throws IllegalArgumentException
 	 *             if pattern contains any syntax errors.
 	 */
-	public static ColorPhrase from(View v, int patternResourceId) {
+	public static TSColorPhrase from(View v, int patternResourceId) {
 		return from(v.getResources(), patternResourceId);
 	}
 
@@ -80,7 +80,7 @@ public class ColorPhrase {
 	 * @throws IllegalArgumentException
 	 *             if pattern contains any syntax errors.
 	 */
-	public static ColorPhrase from(Context c, int patternResourceId) {
+	public static TSColorPhrase from(Context c, int patternResourceId) {
 		return from(c.getResources(), patternResourceId);
 	}
 
@@ -90,7 +90,7 @@ public class ColorPhrase {
 	 * @throws IllegalArgumentException
 	 *             if pattern contains any syntax errors.
 	 */
-	public static ColorPhrase from(Resources r, int patternResourceId) {
+	public static TSColorPhrase from(Resources r, int patternResourceId) {
 		return from(r.getText(patternResourceId));
 	}
 
@@ -100,11 +100,11 @@ public class ColorPhrase {
 	 * @throws IllegalArgumentException
 	 *             if pattern contains any syntax errors.
 	 */
-	public static ColorPhrase from(CharSequence pattern) {
-		return new ColorPhrase(pattern);
+	public static TSColorPhrase from(CharSequence pattern) {
+		return new TSColorPhrase(pattern);
 	}
 
-	private ColorPhrase(CharSequence pattern) {
+	private TSColorPhrase(CharSequence pattern) {
 		curChar = (pattern.length() > 0) ? pattern.charAt(0) : EOF;
 
 		this.pattern = pattern;
@@ -121,7 +121,7 @@ public class ColorPhrase {
 	 * @param _separator
 	 * @return
 	 */
-	public ColorPhrase withSeparator(String _separator) {
+	public TSColorPhrase withSeparator(String _separator) {
 		if (TextUtils.isEmpty(_separator)) {
 			throw new IllegalArgumentException("separator must not be empty!");
 		}
@@ -138,7 +138,7 @@ public class ColorPhrase {
 	 * @param _outerColor
 	 * @return
 	 */
-	public ColorPhrase outerColor(int _outerColor) {
+	public TSColorPhrase outerColor(int _outerColor) {
 		this.outerColor = _outerColor;
 		return this;
 	}
@@ -149,7 +149,7 @@ public class ColorPhrase {
 	 * @param _innerColor
 	 * @return
 	 */
-	public ColorPhrase innerColor(int _innerColor) {
+	public TSColorPhrase innerColor(int _innerColor) {
 		this.innerColor = _innerColor;
 		return this;
 	}

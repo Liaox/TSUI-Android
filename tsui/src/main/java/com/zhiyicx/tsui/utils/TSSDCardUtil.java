@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class SDCardUtil {
+public class TSSDCardUtil {
 	public static String SDCardRoot = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator;
 
 	/**

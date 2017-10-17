@@ -9,9 +9,9 @@ import android.content.Context;
  * @Contact 335891510@qq.com
  */
 
-public class ConvertUtils {
+public class TSConvertUtils {
 
-    private ConvertUtils() {
+    private TSConvertUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
     }
 

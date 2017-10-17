@@ -11,7 +11,7 @@ import android.text.TextPaint;
 import android.text.style.ImageSpan;
 
 import com.zhiyicx.tsui.R;
-import com.zhiyicx.tsui.utils.ConvertUtils;
+import com.zhiyicx.tsui.utils.TSConvertUtils;
 
 /**
  * @Author Jliuer
@@ -86,7 +86,7 @@ public class TSCenterImageSpan extends ImageSpan {
             textP.setColor(Color.WHITE);
             canvas.drawCircle(b.getBounds().centerX(), b.getBounds().centerY(), b.getBounds()
                     .right - b.getBounds().centerX()-2, textB);
-            textP.setTextSize(ConvertUtils.sp2px(mContext, 12));
+            textP.setTextSize(TSConvertUtils.sp2px(mContext, 12));
             canvas.drawText("匿", b.getBounds().centerX() - textP.measureText("匿") / 2, b
                     .getBounds().centerY() - (textP.descent() + textP.ascent()) / 2, textP);
         } else {

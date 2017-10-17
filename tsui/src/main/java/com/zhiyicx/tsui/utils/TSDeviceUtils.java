@@ -44,8 +44,8 @@ import java.util.List;
  * @contact email:450127106@qq.com
  */
 
-public class DeviceUtils {
-    private static final String TAG = "DeviceUtils";
+public class TSDeviceUtils {
+    private static final String TAG = "TSDeviceUtils";
 
 
     /**

@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.PopupWindow;
 
-import com.zhiyicx.tsui.utils.DeviceUtils;
+import com.zhiyicx.tsui.utils.TSDeviceUtils;
 
 
 /**
@@ -124,7 +124,7 @@ public class TSBasePopupWindow extends PopupWindow {
             int[] location = new int[2];
             mParentView.getLocationOnScreen(location);
             showAtLocation(mParentView, Gravity.NO_GRAVITY,
-                    mParentView.getWidth() - mContentView.getWidth(), location[1] - mParentView.getHeight() + DeviceUtils.getStatuBarHeight(mActivity));
+                    mParentView.getWidth() - mContentView.getWidth(), location[1] - mParentView.getHeight() + TSDeviceUtils.getStatuBarHeight(mActivity));
         }
     }
 
