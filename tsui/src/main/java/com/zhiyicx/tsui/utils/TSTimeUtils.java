@@ -50,7 +50,7 @@ public class TSTimeUtils {
     public static String getTimeFriendlyNormal(String timestr) {
         String result = "1分钟内";
         long timesamp = utc2LocalLong(timestr);
-        switch (getifferenceDays(timesamp)) {
+        switch (getDifferenceDays(timesamp)) {
             case 0:
                 result = getFriendlyTimeForBeforHour(timesamp, result);
                 break;
@@ -103,7 +103,7 @@ public class TSTimeUtils {
      */
     public static String getTimeFriendlyNormal(long timesamp) {
         String result = "1分钟内";
-        switch (getifferenceDays(timesamp)) {
+        switch (getDifferenceDays(timesamp)) {
             case 0:
                 result = getFriendlyTimeForBeforHour(timesamp, result);
                 break;
@@ -191,7 +191,7 @@ public class TSTimeUtils {
     public static String getTimeFriendlyForUserHome(String timestr) {
         String result = "1分钟内";
         long timesamp = utc2LocalLong(timestr);
-        switch (getifferenceDays(timesamp)) {
+        switch (getDifferenceDays(timesamp)) {
             case 0:
                 result = "今,天";
                 break;
@@ -219,7 +219,7 @@ public class TSTimeUtils {
      */
     private static String handleDetailTime(long timesamp) {
         String result = "1分钟内";
-        switch (getifferenceDays(timesamp)) {
+        switch (getDifferenceDays(timesamp)) {
             case 0:
                 result = getFriendlyTimeForBeforHour(timesamp, result);
                 break;
@@ -263,7 +263,7 @@ public class TSTimeUtils {
      *
      * @return
      */
-    public static long getCurrenZeroTime() {
+    public static long getCurrentZeroTime() {
         //1、取得本地时间：
         java.util.Calendar cal = java.util.Calendar.getInstance();
         //2、取得时间偏移量：
@@ -277,13 +277,13 @@ public class TSTimeUtils {
     }
 
     /**
-     * 获取当前 0 时区的时间戳
+     * 获取当前 0 时区的时间字符串
      *
      * @return
      */
-    public static String getCurrenZeroTimeStr() {
+    public static String getCurrentZeroTimeStr() {
 
-        return millis2String(getCurrenZeroTime());
+        return millis2String(getCurrentZeroTime());
     }
 
 
@@ -293,7 +293,7 @@ public class TSTimeUtils {
      * @param timesamp 输入时间
      * @return 输入时间和当前时间间隔的天数
      */
-    public static int getifferenceDays(long timesamp) {
+    public static int getDifferenceDays(long timesamp) {
 
         long timeMillisSpace = System.currentTimeMillis() - timesamp;
 
@@ -351,7 +351,7 @@ public class TSTimeUtils {
      * @param timestamp
      * @return
      */
-    public static String getStandardTimeWithYeay(long timestamp) {
+    public static String getStandardTimeWithYear(long timestamp) {
         return getTime(timestamp, "yyyy-MM-dd HH:mm");
     }
 
@@ -361,7 +361,7 @@ public class TSTimeUtils {
      * @param timestamp
      * @return
      */
-    public static String getYeayMonthDay(long timestamp) {
+    public static String getYearMonthDay(long timestamp) {
         return getTime(timestamp, "yyyy-MM-dd");
     }
 
@@ -478,7 +478,7 @@ public class TSTimeUtils {
     public static String string2_ToDya_Yesterday_Week(String timeStr) {
         long time = utc2LocalLong(timeStr);
         Date otherDay = new Date(time);
-        int intervalDays = Math.abs(getifferenceDays(time));
+        int intervalDays = Math.abs(getDifferenceDays(time));
         String[] weeks = {"周日", "周一", "周二", "周三", "周四", "周五", "周六", "今天", "昨天"};
         Calendar cal = Calendar.getInstance();
         cal.setTime(otherDay);
@@ -494,7 +494,7 @@ public class TSTimeUtils {
 
     public static String string2_Dya_Week_Time(String timeStr) {
         long time = utc2LocalLong(timeStr);
-        String yearMothDay = getYeayMonthDay(time);
+        String yearMothDay = getYearMonthDay(time);
         String hourMin = getStandardTimeWithHour(time);
         Date otherDay = new Date(time);
         String[] weeks = {"周日", "周一", "周二", "周三", "周四", "周五", "周六", "今天", "昨天"};

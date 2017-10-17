@@ -36,7 +36,7 @@ public class TSUtilsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ts_utils);
         ButterKnife.bind(this);
         // 当前时间
-        mTvTime.setText("当前时间：\n" + TSTimeUtils.getCurrenZeroTimeStr());
+        mTvTime.setText("当前时间：\n" + TSTimeUtils.getCurrentZeroTimeStr());
         // 设备信息
         mTvDevice.setText("当前设备：\n" + "当前设备是否存在SD卡：" + TSDeviceUtils.isExitsSdcard() + "\n状态栏高度：" + TSDeviceUtils.getStatuBarHeight(this)
                 + "\n屏幕宽高：" + TSDeviceUtils.getScreenWidth(this) + "、" + TSDeviceUtils.getScreenHeight(this));
