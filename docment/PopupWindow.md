@@ -1,10 +1,10 @@
 # 通用组件 PopupWindow相关
 
 ### 自定义 TSBasePopupWindow
-#### 使用方法
-```
-
-```
+#### 使用方法以及注意事项
+- 继承TSBasePopupWindow，可以设置背景透明度，宽高等基础信息，如有其他需求可以继承Builder。
+- Builder的with()和contentView()方法必须传参。
+- show()方法默认为中间弹出，如果有其他需要，重写此方法
 
 
 ### 自定义 TSCenterAlertPopWindow 继承自TSBasePopupWindow 中间提示框，带有底部两个按钮
