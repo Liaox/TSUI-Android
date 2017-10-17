@@ -31,6 +31,9 @@
         <activity
                 android:name=".TSImageViewActivity"
                 android:screenOrientation="portrait"/>
+        <activity
+                android:name=".TSUtilsActivity"
+                android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

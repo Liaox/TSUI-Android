@@ -52,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         CateBean cateImageView = new CateBean();
         cateImageView.setTitle("ImageView");
         list.add(cateImageView);
+        // Utils
+        CateBean cateUtils = new CateBean();
+        cateUtils.setTitle("Utils");
+        list.add(cateUtils);
         MyAdapter adapter = new MyAdapter(this, list);
         mRv.setAdapter(adapter);
         adapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
@@ -77,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
                     case 4:
                         Intent intent4 = new Intent(MainActivity.this, TSImageViewActivity.class);
                         startActivity(intent4);
+                        break;
+                    case 5:
+                        Intent intent5 = new Intent(MainActivity.this, TSUtilsActivity.class);
+                        startActivity(intent5);
                         break;
                     default:
                 }
