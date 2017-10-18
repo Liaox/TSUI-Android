@@ -127,4 +127,58 @@
         <attr name="ts_ratio" format="float"/>
 
     </declare-styleable>
+
+    <!--IconTextView图标文本控件-->
+    <declare-styleable name="TSIconTextView">
+        <!--文字大小-->
+        <attr name="tsIconTextSize" format="dimension|reference"/>
+        <!--文字颜色-->
+        <attr name="tsIconTextColor" format="color|reference"/>
+
+        <!--图片与文字间隔-->
+        <attr name="tsIconGap" format="dimension|reference"/>
+
+        <!--方向
+             TOP：上边
+             BOTTOM: 下边
+             LEFT：左边
+             RIGHT：右边
+        -->
+        <attr name="tsIconDirection">
+            <enum name="TOP" value="0"/>
+            <enum name="BOTTOM" value="1"/>
+            <enum name="LEFT" value="2"/>
+            <enum name="RIGHT" value="3"/>
+        </attr>
+
+        <!--图片资源-->
+        <attr name="tsIcon" format="reference"/>
+        <!--显示的文本-->
+        <attr name="tsIconText" format="string|reference"/>
+
+        <!--图片宽高,如果不设置宽度和高度的话，默认按照图片的宽度和高度来-->
+        <attr name="tsIconWidth" format="dimension|reference"/>
+        <attr name="tsIconHeight" format="dimension|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="TSExpandableTextView">
+        <attr name="tsMaxLinesOnShrink" format="reference|integer" />
+        <attr name="tsIsNeedShrink" format="boolean" />
+        <attr name="tsEllipsisHint" format="reference|string" /><!--default is ..-->
+        <attr name="tsToExpandHint" format="reference|string" /><!--"to expand" hint string, default is "Expand"-->
+        <attr name="tsToShrinkHint" format="reference|string" /><!--"to shrink" hint string, default is "Shrink"-->
+        <attr name="tsGapToExpandHint" format="reference|string" /><!--gap between "toExpandHint" and "trimmed text"-->
+        <attr name="tsGapToShrinkHint" format="reference|string" /><!--gap between "toShrinkHint" and "trimmed text"-->
+        <attr name="tsEnableToggle" format="reference|boolean" /><!--if toggle the state when click ExpandTextView-->
+        <attr name="tsToExpandHintShow" format="reference|boolean" /><!--if show "toExpandHint"-->
+        <attr name="tsToShrinkHintShow" format="reference|boolean" /><!--if show "toShrinkHint"-->
+        <attr name="tsToExpandHintColor" format="reference|color" /><!--text color of "toExpandHint"-->
+        <attr name="tsToShrinkHintColor" format="reference|color" /><!--text color of "toShrinkHint"-->
+        <attr name="tsToExpandHintColorBgPressed" format="reference|color" /><!--background color if "toExpandHint" pressed-->
+        <attr name="tsToShrinkHintColorBgPressed" format="reference|color" /><!--background color if "toShrinkHint" pressed-->
+        <attr name="tsInitState" format="enum"><!--init state, default is shrink-->
+            <enum name="shrink" value="0"/>
+            <enum name="expand" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

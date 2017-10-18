@@ -8,4 +8,5 @@
     <string name="ts_hint_pre_edittext">带有前缀的输入框</string>
     <string name="ts_hint_limit_edittext">带有限制长度的输入框</string>
     <string name="ts_hint_drawable_size_textview">可以设置 drawable 大小的 TextView</string>
+    <string name="tsui_hint_expend_textview">可以展开与收起的TextView，可以设置1、最高展示行数 2、展开与收起的文字内容颜色等等啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦绿啦啦啦啦啦啦啦</string>
 </resources>
