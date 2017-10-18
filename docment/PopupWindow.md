@@ -63,4 +63,4 @@ mCenterOnlyPopWindow = TSCenterOnlyPopWindow.builder()
 
 ### 效果图
 
-![效果](/image/PopupWindw.gif)
+![效果](/image/PopupWindow.gif)
