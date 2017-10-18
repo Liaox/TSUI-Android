@@ -35,6 +35,9 @@ mEmptyView.setErrorType(TSEmptyView.STATE_NODATA);
             image:ts_avatare_size="@dimen/head_pic_default"
             android:layout_below="@+id/user_avatar_hint"
             android:src="@mipmap/ic_launcher"/>
+            
+ // 设置认证的图标
+ mUserAvatar1.getIvVerify().setImageResource(R.mipmap.ic_launcher_round);
 ```
 
 |方法名(包含xml与对外提供的方法)|参数/返回值|说明
