@@ -11,6 +11,14 @@
             btn:tsLeftText="TSCombinationButton"
             btn:tsRightText="123"
             btn:tsLeftTextColor="@android:color/holo_green_light"/>
+
+点击事件：
+mTsLoadingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // TODO
+            }
+        });
 ```
 
 |方法名(包含xml与对外提供的方法)|参数/返回值|说明
@@ -48,3 +56,7 @@
 |tsTextColor|color|按钮文字颜色|
 |tsLoadingView|id|加载的动画资源|
 |handleAnimation()|Boolean|控制动画
+
+### 效果图
+
+![效果](/image/Button.gif)
