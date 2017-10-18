@@ -111,6 +111,9 @@ public class TSEmptyView extends LinearLayout {
         mLlContent = view.findViewById(R.id.ll_content);
         mIvError = view.findViewById(R.id.iv_error_layout);
         mTvError = view.findViewById(R.id.tv_error_layout);
+        // 设置默认的提示文字
+        setNoNetTip(DEFAULT_NO_NET_TIP);
+        setNoNetTip(DEFAULT_NO_DATA_TIP);
         mAnimProgress = view.findViewById(R.id.pb_animation_bar);
         mLlContent.setOnClickListener(new OnClickListener() {
             @Override

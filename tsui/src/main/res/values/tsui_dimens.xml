@@ -92,6 +92,8 @@
         *                   View                    *
         **********************************************-->
     <dimen name="head_pic_default">38dp</dimen>
+    <dimen name="head_pic_default_58">58dp</dimen>
+    <dimen name="head_pic_default_78">78dp</dimen>
 
 
     <!-- 全局统一的界面左右间距，例如列表分隔线inset -->

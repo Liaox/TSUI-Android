@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:image="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+                xmlns:image="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <TextView
             android:id="@+id/user_avatar_hint"
@@ -12,20 +12,43 @@
             android:layout_margin="@dimen/tsui_default_10"
             android:text="一个通用的用户头像，可以设置认证图标"/>
 
-    <com.zhiyicx.tsui.widget.view.TSUserAvatarView
-            android:id="@+id/user_avatar"
-            android:layout_width="@dimen/head_pic_default"
-            android:layout_height="@dimen/head_pic_default"
+    <LinearLayout
+            android:id="@+id/ll_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/tsui_default_10"
-            image:ts_avatare_size="@dimen/head_pic_default"
             android:layout_below="@+id/user_avatar_hint"
-            android:src="@mipmap/ic_launcher"/>
+            android:orientation="horizontal">
+
+        <com.zhiyicx.tsui.widget.view.TSUserAvatarView
+                android:id="@+id/user_avatar1"
+                android:layout_width="@dimen/head_pic_default"
+                android:layout_height="@dimen/head_pic_default"
+                image:ts_avatare_size="@dimen/head_pic_default"
+                android:src="@mipmap/ic_launcher"/>
+
+        <com.zhiyicx.tsui.widget.view.TSUserAvatarView
+                android:id="@+id/user_avatar2"
+                android:layout_width="@dimen/head_pic_default_58"
+                android:layout_height="@dimen/head_pic_default_58"
+                image:ts_avatare_size="@dimen/head_pic_default_58"
+                android:layout_marginLeft="@dimen/tsui_default_10"
+                android:src="@mipmap/ic_launcher"/>
+
+        <com.zhiyicx.tsui.widget.view.TSUserAvatarView
+                android:id="@+id/user_avatar3"
+                android:layout_width="@dimen/head_pic_default_78"
+                android:layout_height="@dimen/head_pic_default_78"
+                image:ts_avatare_size="@dimen/head_pic_default_78"
+                android:layout_marginLeft="@dimen/tsui_default_10"
+                android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
 
     <TextView
             android:id="@+id/empty_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/user_avatar"
+            android:layout_below="@+id/ll_avatar"
             android:layout_margin="@dimen/tsui_default_10"
             android:text="缺省页，可以设置不同改的状态以及对应的文字图片"/>
 
@@ -35,21 +58,29 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/empty_hint"
             android:orientation="horizontal">
+
         <Button
                 android:id="@+id/btn_no_data"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="nodata"/>
+
         <Button
                 android:id="@+id/btn_no_net"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="nonet"/>
+
         <Button
                 android:id="@+id/btn_loading"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="loading"/>
+        <Button
+                android:id="@+id/btn_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hide"/>
     </LinearLayout>
 
     <com.zhiyicx.tsui.widget.view.TSEmptyView
