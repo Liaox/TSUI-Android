@@ -27,9 +27,12 @@ public class TSPopupWindowActivity extends AppCompatActivity {
     AppCompatButton mBtnCenterAlert;
     @BindView(R.id.btn_alert_only)
     AppCompatButton mBtnAlertOnly;
+    @BindView(R.id.btn_alert_only_with_button)
+    AppCompatButton mBtnAlertOnlyWithButton;
 
     private TSCenterAlertPopWindow mCenterAlertPopWindow;
     private TSCenterOnlyPopWindow mCenterOnlyPopWindow;
+    private TSCenterOnlyPopWindow mCenterOnlyWithButtonPopWindow;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,7 +42,7 @@ public class TSPopupWindowActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_center_alert, R.id.btn_alert_only})
+    @OnClick({R.id.btn_center_alert, R.id.btn_alert_only, R.id.btn_alert_only_with_button})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.btn_center_alert:
@@ -89,6 +92,26 @@ public class TSPopupWindowActivity extends AppCompatActivity {
                             .build();
                 }
                 mCenterOnlyPopWindow.show();
+                break;
+            case R.id.btn_alert_only_with_button:
+                if (mCenterOnlyWithButtonPopWindow == null){
+                    mCenterOnlyWithButtonPopWindow = TSCenterOnlyPopWindow.builder()
+                            .with(this)
+                            .backgroundAlpha(0.8f)
+                            .titleContent("title")
+                            .centerContent("content")
+                            .isShowBottomButton(true)
+                            .buildCenterPopWindowItem1ClickListener(new TSCenterOnlyPopWindow.CenterPopWindowItemClickListener() {
+                                @Override
+                                public void onButtonClick() {
+                                    // 点击底部按钮
+                                    Toast.makeText(TSPopupWindowActivity.this, "点击底部按钮", Toast.LENGTH_SHORT).show();
+                                    mCenterOnlyWithButtonPopWindow.dismiss();
+                                }
+                            })
+                            .build();
+                }
+                mCenterOnlyWithButtonPopWindow.show();
                 break;
             default:
         }

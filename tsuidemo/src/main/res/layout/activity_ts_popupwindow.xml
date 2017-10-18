@@ -39,10 +39,20 @@
 
 
     <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_alert_only"
+        android:id="@+id/btn_alert_only"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="仅提示语弹框"
+        android:padding="@dimen/tsui_default_10"
+        android:textColor="@color/tsui_config_color_white"
+        android:layout_margin="@dimen/tsui_default_10"
+        android:background="@drawable/shape_button_corner_normal_solid_small"/>
+
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_alert_only_with_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="仅提示语弹框"
+            android:text="仅提示语弹框，有按钮"
             android:padding="@dimen/tsui_default_10"
             android:textColor="@color/tsui_config_color_white"
             android:layout_margin="@dimen/tsui_default_10"
