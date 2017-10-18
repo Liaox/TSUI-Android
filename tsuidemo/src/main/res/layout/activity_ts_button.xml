@@ -15,13 +15,21 @@
             android:text="@string/ts_hint_loading_button"
             android:layout_margin="@dimen/tsui_default_10"/>
 
+    <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_change"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:textColor="@color/tsui_config_color_white"
+            android:background="@color/tsui_default_color"
+            android:text="change"/>
+
     <com.zhiyicx.tsui.widget.button.TSLoadingButton
             android:id="@+id/tsLoadingBtn"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/tsui_default_10"
             btn:tsText="点击"
-            btn:tsTextColor="#801B88EE"/>
+            btn:tsTextColor="@color/tsui_config_color_white"/>
 
     <TextView
             android:layout_width="wrap_content"
@@ -35,5 +43,7 @@
             android:layout_marginTop="@dimen/tsui_default_10"
             btn:tsLeftText="TSCombinationButton"
             btn:tsRightText="123"
-            btn:tsLeftTextColor="@android:color/holo_green_light"/>
+            btn:tsLeftTextColor="@android:color/holo_green_light"
+            btn:tsLeftImage="@mipmap/activity_ico_people"
+            btn:tsRightImage="@mipmap/activity_ico_people"/>
 </LinearLayout>

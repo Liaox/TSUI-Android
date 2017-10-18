@@ -59,7 +59,7 @@ public class TSLoadingButton extends FrameLayout {
         if (!TextUtils.isEmpty(text)) {
             mTvText.setText(text);
         }
-        mTvText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
+//        mTvText.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
         mTvText.setTextColor(textColor);
         if (animationRes != null){
             mIvLoad.setImageDrawable(animationRes);
