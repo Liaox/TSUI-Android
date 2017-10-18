@@ -60,3 +60,7 @@ mCenterOnlyPopWindow = TSCenterOnlyPopWindow.builder()
                 }
  mCenterOnlyPopWindow.show();
 ```
+
+### 效果图
+
+![效果](/image/PopupWindw.gif)
