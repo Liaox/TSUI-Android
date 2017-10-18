@@ -49,8 +49,8 @@ public class TSFilterImageView extends AppCompatImageView {
 
     private void initAttrs(Context context, AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TSFilterImageView);
-        mPressedColor = array.getInteger(R.styleable.TSFilterImageView_pressColor, DEFAULT_PRESSED_COLOR);
-        mShape = array.getInteger(R.styleable.TSFilterImageView_pressShape, SHAPE_SQUARE);
+        mPressedColor = array.getInteger(R.styleable.TSFilterImageView_tsPressColor, DEFAULT_PRESSED_COLOR);
+        mShape = array.getInteger(R.styleable.TSFilterImageView_tsPressShape, SHAPE_SQUARE);
         array.recycle();
         mPaint = new TextPaint();
         mPaint.setColor(mPressedColor);

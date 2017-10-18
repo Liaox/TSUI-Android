@@ -44,25 +44,25 @@
     <!--组合输入框 文字 输入框-->
     <declare-styleable name="TSInputContainHint">
         <!--是否显示分割线-->
-        <attr name="showDiver" format="reference|boolean"/>
+        <attr name="tsShowDiver" format="reference|boolean"/>
         <!--是否必填-->
-        <attr name="isRequired" format="enum">
+        <attr name="tsIsRequired" format="enum">
             <enum name="visiable" value="0"/>
             <enum name="invisiable" value="4"/>
             <enum name="gone" value="8"/>
         </attr>
         <!--左边文字-->
-        <attr name="leftHintText" format="reference|string"/>
+        <attr name="tsLeftHintText" format="reference|string"/>
         <!--输入框提示-->
-        <attr name="rightHint" format="reference|string"/>
+        <attr name="tsRightHint" format="reference|string"/>
         <!--输入的类型-->
-        <attr name="rightInputType" format="reference|string"/>
+        <attr name="tsRightInputType" format="reference|string"/>
         <!--输入长度-->
-        <attr name="rightMaxLength" format="reference|integer"/>
+        <attr name="tsRightMaxLength" format="reference|integer"/>
         <!--内容高度-->
-        <attr name="totalMinHeight" format="reference|dimension"/>
+        <attr name="tsTotalMinHeight" format="reference|dimension"/>
         <!--输入行数最高-->
-        <attr name="rightMaxLines" format="reference|integer"/>
+        <attr name="tsRightMaxLines" format="reference|integer"/>
     </declare-styleable>
 
     <!--带有前缀的输入框-->
@@ -91,8 +91,8 @@
     </declare-styleable>
     <!-- 有按下效果的TSFilterImageView -->
     <declare-styleable name="TSFilterImageView">
-        <attr name="pressColor" format="reference|color"/>
-        <attr name="pressShape">
+        <attr name="tsPressColor" format="reference|color"/>
+        <attr name="tsPressShape">
             <enum name="square" value="0"/>
             <enum name="circle" value="1"/>
         </attr>
@@ -101,7 +101,7 @@
     <!--图文编辑框-->
     <declare-styleable name="TSMarkDownEditor">
         <!--输入框hint-->
-        <attr name="ts_md_hint" format="string"/>
+        <attr name="tsTsMdHint" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="TSEmptyView">

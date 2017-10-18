@@ -44,9 +44,9 @@
             android:layout_height="45dp"
             style="@style/style_edit"
             tools:text="xxxxxxxxxxx"
-            edit:showDiver="true"
-            edit:isRequired="visiable"
-            edit:leftHintText="xxx:"/>
+            edit:tsShowDiver="true"
+            edit:tsIsRequired="visiable"
+            edit:tsLeftHintText="xxx:"/>
 
     <TextView
             android:layout_width="wrap_content"

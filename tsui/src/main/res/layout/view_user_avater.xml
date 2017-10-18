@@ -10,7 +10,7 @@
         android:id="@+id/iv_avatar"
         android:layout_width="@dimen/tsui_default_30"
         android:layout_height="@dimen/tsui_default_30"
-        app:pressShape="circle"
+        app:tsPressShape="circle"
         android:src="@mipmap/ic_launcher"/>
 
     <ImageView

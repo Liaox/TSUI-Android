@@ -49,14 +49,14 @@ public class TSInfoInputEditText extends LinearLayout {
         mIvBottomDiver = findViewById(R.id.iv_bottom_diver);
         TypedArray array = context.obtainStyledAttributes(attrs,
                 R.styleable.TSInputContainHint);
-        String leftText = array.getString(R.styleable.TSInputContainHint_leftHintText);
-        String hint = array.getString(R.styleable.TSInputContainHint_rightHint);
-        mVisiable = array.getInteger(R.styleable.TSInputContainHint_isRequired, VISIBLE);
-        isShowDiver = array.getBoolean(R.styleable.TSInputContainHint_showDiver, true);
-        String inputType = array.getString(R.styleable.TSInputContainHint_rightInputType);
-        int maxLines = array.getInteger(R.styleable.TSInputContainHint_rightMaxLines, 0);
-        int maxLength = array.getInteger(R.styleable.TSInputContainHint_rightMaxLength, 0);
-        int minHeight = array.getDimensionPixelOffset(R.styleable.TSInputContainHint_totalMinHeight, 0);
+        String leftText = array.getString(R.styleable.TSInputContainHint_tsLeftHintText);
+        String hint = array.getString(R.styleable.TSInputContainHint_tsRightHint);
+        mVisiable = array.getInteger(R.styleable.TSInputContainHint_tsIsRequired, VISIBLE);
+        isShowDiver = array.getBoolean(R.styleable.TSInputContainHint_tsShowDiver, true);
+        String inputType = array.getString(R.styleable.TSInputContainHint_tsRightInputType);
+        int maxLines = array.getInteger(R.styleable.TSInputContainHint_tsRightMaxLines, 0);
+        int maxLength = array.getInteger(R.styleable.TSInputContainHint_tsRightMaxLength, 0);
+        int minHeight = array.getDimensionPixelOffset(R.styleable.TSInputContainHint_tsTotalMinHeight, 0);
         array.recycle();
         mTvFlagRequired.setVisibility(mVisiable);
         mIvBottomDiver.setVisibility(isShowDiver ? VISIBLE : GONE);

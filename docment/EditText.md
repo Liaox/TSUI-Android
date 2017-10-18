@@ -42,19 +42,19 @@
             android:layout_height="45dp"
             style="@style/style_edit"
             tools:text="xxxxxxxxxxx"
-            edit:showDiver="true"
-            edit:isRequired="visiable"
-            edit:leftHintText="xxx:"/>
+            edit:tsShowDiver="true"
+            edit:tsIsRequired="visiable"
+            edit:tsLeftHintText="xxx:"/>
 ```
 
 |方法名(包含xml与对外提供的方法)|参数/返回值|说明
 |:---:|:---:|:---:|
-|showDiver|boolean|是否显示分割线
-|isRequired|visiable、gone|是否显示必填符号“*”
-|leftHintText|string|左边的文字信息，输入的类别提示等
-|rightHint|string|右边输入框的提示语
+|tsShowDiver|boolean|是否显示分割线
+|tsIsRequired|visiable、gone|是否显示必填符号“*”
+|tsLeftHintText|string|左边的文字信息，输入的类别提示等
+|tsRightHint|string|右边输入框的提示语
 |getEditInput()|EditText|可以获取右边输入框对象
-|rightMaxLines|int|输入框的最大行数
+|tsRightMaxLines|int|输入框的最大行数
 
 
 ### 带有前缀的输入框 TSPrefixEditText
