@@ -42,3 +42,7 @@ mEmptyView.setErrorType(TSEmptyView.STATE_NODATA);
 |ts_avatare_size|dimen|头像大小|
 |getIvAvatar|TSFilterImageView|获取头像控件|
 |getIvVerify|ImageView|获取认证的控件
+
+### 效果图
+
+![效果](/image/View.gif)
