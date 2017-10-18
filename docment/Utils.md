@@ -80,6 +80,10 @@ PS:emm 剩下的自己探索吧……
 |string2_ToDya_Yesterday_Week|String timeStr|String|获取时间 对应 星期几|
 |string2MillisDefaultLocal|String time|long|将时间字符串转为时间戳|
 
+### 效果
+
+![youtube](/image/Utils.gif)
+
 
 
 
