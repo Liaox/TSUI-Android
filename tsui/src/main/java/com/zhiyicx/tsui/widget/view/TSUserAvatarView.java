@@ -41,7 +41,7 @@ public class TSUserAvatarView extends FrameLayout {
     }
 
     private void init(AttributeSet attrs) {
-        LayoutInflater.from(getContext()).inflate(R.layout.view_user_avater, this);
+        LayoutInflater.from(getContext()).inflate(R.layout.ts_view_user_avater, this);
         if (attrs != null) {
             TypedArray array = getContext().obtainStyledAttributes(attrs,
                     R.styleable.TSUserAvatarView);

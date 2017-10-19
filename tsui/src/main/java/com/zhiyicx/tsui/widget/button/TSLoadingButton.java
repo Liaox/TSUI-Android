@@ -6,7 +6,6 @@ import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -40,7 +39,7 @@ public class TSLoadingButton extends FrameLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        LayoutInflater.from(context).inflate(R.layout.view_loading_button, this);
+        LayoutInflater.from(context).inflate(R.layout.ts_view_loading_button, this);
         mContainer = findViewById(R.id.rl_container);
         mTvText = findViewById(R.id.tv_text);
         mIvLoad = findViewById(R.id.iv_load);

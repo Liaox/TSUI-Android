@@ -225,7 +225,7 @@ public class TSCenterOnlyPopWindow extends TSBasePopupWindow {
 
         @Override
         public TSCenterOnlyPopWindow build() {
-            contentViewId = R.layout.ppw_for_center_only;
+            contentViewId = R.layout.ts_ppw_for_center_only;
             isWrap = true;
             return new TSCenterOnlyPopWindow(this);
         }

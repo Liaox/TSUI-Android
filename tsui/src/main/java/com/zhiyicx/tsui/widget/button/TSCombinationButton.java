@@ -32,7 +32,7 @@ public class TSCombinationButton extends FrameLayout {
 
     public TSCombinationButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.view_combination_button, this);
+        LayoutInflater.from(context).inflate(R.layout.ts_view_combination_button, this);
         mCombinedButtonImgLeft = findViewById(R.id.iv_left_img);
         mCombinedButtonImgRight = findViewById(R.id.iv_right_img);
         mCombinedButtonLeftText = findViewById(R.id.tv_left_text);

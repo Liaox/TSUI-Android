@@ -263,7 +263,7 @@ public class TSCenterAlertPopWindow extends TSBasePopupWindow {
 
         @Override
         public TSCenterAlertPopWindow build() {
-            contentViewId = R.layout.ppw_for_center_alert;
+            contentViewId = R.layout.ts_ppw_for_center_alert;
             isWrap = true;
             return new TSCenterAlertPopWindow(this);
         }

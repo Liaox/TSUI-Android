@@ -1,10 +1,8 @@
 package com.zhiyicx.tsui.widget.view;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
@@ -107,7 +105,7 @@ public class TSEmptyView extends LinearLayout {
 
     private void init(Context context, AttributeSet attrs) {
         this.mContext = context;
-        View view = View.inflate(mContext, R.layout.view_empty, this);
+        View view = View.inflate(mContext, R.layout.ts_view_empty, this);
         mLlContent = view.findViewById(R.id.ll_content);
         mIvError = view.findViewById(R.id.iv_error_layout);
         mTvError = view.findViewById(R.id.tv_error_layout);

@@ -48,7 +48,7 @@
             android:id="@+id/empty_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_avatar"
+            android:layout_below="@id/ll_avatar"
             android:layout_margin="@dimen/tsui_default_10"
             android:text="缺省页，可以设置不同改的状态以及对应的文字图片"/>
 

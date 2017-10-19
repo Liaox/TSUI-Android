@@ -74,7 +74,7 @@ public class TSInputLimitView extends FrameLayout {
     }
 
     private void init(final Context context, AttributeSet attrs) {
-        LayoutInflater.from(context).inflate(R.layout.view_input_limit_viewgroup, this);
+        LayoutInflater.from(context).inflate(R.layout.ts_view_input_limit_viewgroup, this);
         mTvLimitTip = findViewById(R.id.tv_limit_tip);
         mBtSend = findViewById(R.id.bt_send);
         mEtContent = findViewById(R.id.et_content);

@@ -42,7 +42,7 @@ public class TSInfoInputEditText extends LinearLayout {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        LayoutInflater.from(context).inflate(R.layout.view_info_input, this);
+        LayoutInflater.from(context).inflate(R.layout.ts_view_info_input, this);
         mTvFlagRequired = findViewById(R.id.tv_flag_required);
         mTvLeftText = findViewById(R.id.tv_left_text);
         mEditInput = findViewById(R.id.edit_input);
