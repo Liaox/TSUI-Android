@@ -82,3 +82,25 @@
             }
         });
 ```
+
+
+### TSUserIntroduceInputView 可以设置提示语等等的提示限制输入长度的输入框
+#### 使用方法
+```
+<com.zhiyicx.tsui.widget.edittext.TSUserIntroduceInputView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            edit:tsLimitSize="20"
+            edit:tsShowLimitSize="15"
+            edit:tsHintContent="请输入内容"
+            edit:tsContent_gravity="left"/>
+```
+
+|方法名(包含xml与对外提供的方法)|参数/返回值|说明
+|:---:|:---:|:---:|
+|tsLimitSize|int|输入的最大值|
+|tsShowLimitSize|int|输入多少字的时候显示 限制提示|
+|tsHintContent|string|输入框的hint提示符|
+|tsShowLines|int|编辑框显示的行数，超过就滚动|
+|tsContent_gravity|left/right|内容位置|
+
