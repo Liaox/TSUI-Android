@@ -43,6 +43,7 @@
     <!--**********************************************
     *                  EditText                        *
     **********************************************-->
+    <dimen name="tsui_text_size_10">10sp</dimen>
     <dimen name="tsui_text_size_11">11sp</dimen>
     <dimen name="tsui_text_size_13">13sp</dimen>
     <dimen name="tsui_text_size_14">14sp</dimen>

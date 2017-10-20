@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/tsui_config_color_white">
+        android:background="@color/input_view_bg_color">
 
     <View
             style="@style/style_divider_horizontal"/>
@@ -24,8 +24,7 @@
         <EditText
                 android:id="@+id/et_content"
                 style="@style/style_edit_bg_line"
-                android:layout_toLeftOf="@+id/tv_limit_tip"
-                android:layout_toStartOf="@id/tv_limit_tip"
+                android:layout_toLeftOf="@+id/bt_send"
                 tools:text="视卡鼓励进口大幅拉升刚刚加息公积金阿哥电视卡鼓励进口大幅拉刚刚加息公积金阿哥电视卡鼓励进口大幅拉刚刚加"
                 />
 
@@ -42,22 +41,20 @@
                 android:gravity="center"
                 android:textColor="@color/tsui_config_color_white"
                 android:textSize="@dimen/tsui_text_size_14"
-                android:visibility="gone"/>
+                android:visibility="gone"
+                />
 
         <TextView
                 android:id="@+id/tv_limit_tip"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/tsui_default_10"
                 android:layout_above="@id/bt_send"
+                android:layout_toRightOf="@id/et_content"
                 android:gravity="center"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:paddingBottom="@dimen/tsui_default_10"
-                android:textColor="@color/tsui_config_color_black"
-                android:textSize="@dimen/tsui_text_size_11"
-                android:visibility="gone"
+                android:paddingBottom="@dimen/tsui_default_5"
+                android:textColor="@color/tsui_config_color_red_note"
+                android:textSize="@dimen/tsui_text_size_10"
                 tools:text="210/255"/>
     </RelativeLayout>
 </FrameLayout>

@@ -22,7 +22,7 @@ import com.zhiyicx.tsui.utils.TSColorPhrase;
 
 /**
  * @Describe 限制输入控件 view
- * @Author Jungle68
+ * @author Jungle68
  * @Date 2017/1/12
  * @Contact master.jungle68@gmail.com
  */
@@ -134,7 +134,7 @@ public class TSInputLimitView extends FrameLayout {
                 if (s.length() >= mShowLimitSize) {
                     mLimitTipStr = "<" + s.length() + ">" + "/" + mLimitMaxSize;
                     CharSequence chars = TSColorPhrase.from(mLimitTipStr).withSeparator("<>")
-                            .innerColor(ContextCompat.getColor(context, R.color.tsui_config_color_red))
+                            .innerColor(ContextCompat.getColor(context, R.color.tsui_config_color_red_note))
                             .outerColor(ContextCompat.getColor(context, R.color.tsui_general_for_hint))
                             .format();
                     mTvLimitTip.setText(chars);
@@ -171,10 +171,10 @@ public class TSInputLimitView extends FrameLayout {
     /**
      * 设置发送按钮是否显示
      *
-     * @param isVisiable true 显示
+     * @param isVisible true 显示
      */
-    public void setSendButtonVisiable(boolean isVisiable) {
-        if (isVisiable) {
+    public void setSendButtonVisible(boolean isVisible) {
+        if (isVisible) {
             mBtSend.setVisibility(VISIBLE);
         } else {
             mBtSend.setVisibility(GONE);
